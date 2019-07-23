@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         if(Input.GetKeyDown (KeyCode.R))
         {
-            SceneManager.LoadScene("Space Shooter"); 
+            SceneManager.LoadScene("SampleScene"); 
         }
     }
 
