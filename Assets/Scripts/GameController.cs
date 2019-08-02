@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 
     private bool gameOver;
     private bool restart;
+    private bool pauseEnabled;
     private int score;
 
    
@@ -86,7 +87,9 @@ public class GameController : MonoBehaviour
             WinText.text = "You win! Game by Sara B.";
             gameOver = true;
             restart = true;
-           
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach(GameObject Enemy in enemies)
+            GameObject.Destroy(Enemy);          
            }      
         
     }
@@ -95,7 +98,10 @@ public class GameController : MonoBehaviour
     {
         GameOverText.text = "Game Over!";
         gameOver = true;
+        
     }
+
+   
     
     
 }
